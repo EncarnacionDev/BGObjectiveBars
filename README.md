@@ -16,13 +16,10 @@ Porteado desde el parche custom `WorldStateFrame` de PandaWoW. Funciona con el c
 
 ## Instalación
 
-1. Descargá el repo y descomprimilo.
-2. Copiá la carpeta `BGObjectiveBars` en `World of Warcraft/Interface/AddOns/`.
-3. Reiniciá el cliente (o `/rl`) y asegurate de tener el addon activado.
-
-## Uso
-
-- `/bgbars` — muestra/oculta las barras (solo aparecen dentro de un campo de batalla).
+1. Descargá el repo como ZIP y descomprimilo.
+2. Renombrá la carpeta extraída de `BGObjectiveBars-main` a `BGObjectiveBars` (debe coincidir con el `.toc`, si no el addon no carga).
+3. Copiá la carpeta `BGObjectiveBars` en `World of Warcraft/Interface/AddOns/`.
+4. Reiniciá el cliente (o `/rl`) y asegurate de tener el addon activado.
 
 ## Requisitos
 
