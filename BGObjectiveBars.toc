@@ -1,0 +1,8 @@
+## Interface: 50400
+## Title: BGObjectiveBars
+## Notes: Battleground objective bars (flag captures / team points as bars). Ported from the PandaWoW custom WorldStateFrame.
+## Version: 1.0.0
+## Author: Ported addon
+## X-Category: Battleground
+
+BGObjectiveBars.lua
