@@ -731,7 +731,8 @@ addon:RegisterEvent("WORLD_STATE_TIMER_STOP")
 
 -- Hide the stock numeric flag/points indicators (AlwaysUpFrame1..N) while our bars are shown
 hooksecurefunc("WorldStateAlwaysUpFrame_Update", function()
-	if bars.frame and bars.frame:IsShown() then
+	local _, instanceType = IsInInstance()
+	if instanceType == "pvp" then
 		local max = NUM_ALWAYS_UP_UI_FRAMES or 20
 		for i = 1, max do
 			local f = _G["AlwaysUpFrame"..i]
