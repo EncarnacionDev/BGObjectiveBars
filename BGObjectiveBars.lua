@@ -729,15 +729,23 @@ addon:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 addon:RegisterEvent("WORLD_STATE_TIMER_START")
 addon:RegisterEvent("WORLD_STATE_TIMER_STOP")
 
--- Hide the stock numeric flag/points indicators (AlwaysUpFrame1..N) while our bars are shown
+-- Hide the stock numeric flag/points indicators (AlwaysUpFrame1..N) in any supported battleground
+local SUPPORTED_MAPS = {
+	[BATTLEGROUND_WARSONG_GULCH] = true, [BATTLEGROUND_ARATHI_BASIN] = true,
+	[BATTLEGROUND_EYE_OF_THE_STORM] = true, [BATTLEGROUND_TWIN_PEAKS] = true,
+	[BATTLEGROUND_BATTLE_FOR_GILNEAS] = true, [BATTLEGROUND_TEMPLE_OF_KOTMOGU] = true,
+	[BATTLEGROUND_SILVER_SHARD_MINES] = true, [BATTLEGROUND_DEEPWIND_GORGE] = true,
+	[BATTLEGROUND_ALTERAC_VALLEY] = true, [BATTLEGROUND_ISLE_OF_CONQUEST] = true,
+	[BATTLEGROUND_SEETHING_SHORE] = true, [BATTLEGROUND_WINDVALE_MARKET] = true,
+}
+
 hooksecurefunc("WorldStateAlwaysUpFrame_Update", function()
-	if bars.frame and bars.frame:IsShown() then
-		local max = NUM_ALWAYS_UP_UI_FRAMES or 20
-		for i = 1, max do
-			local f = _G["AlwaysUpFrame"..i]
-			if f then
-				f:Hide()
-			end
+	if not SUPPORTED_MAPS[GetCurrentMapAreaID()] then return end
+	local max = NUM_ALWAYS_UP_UI_FRAMES or 20
+	for i = 1, max do
+		local f = _G["AlwaysUpFrame"..i]
+		if f then
+			f:Hide()
 		end
 	end
 end)
