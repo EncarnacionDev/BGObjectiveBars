@@ -7,6 +7,8 @@ Addon de barras de objetivo para campos de batalla en **World of Warcraft: Mists
 
 Porteado desde el parche custom `WorldStateFrame` de PandaWoW. Funciona con el cliente 5.4.x estándar usando la API estándar de 5.4 y las texturas del widget de objetivos incluidas (con fallback a colores sólidos si faltan).
 
+![BGObjectiveBars en campo de batalla](images/screenshot.png)
+
 ## Campos de batalla soportados
 
 - Garganta Grito de Guerra / Cumbres Gemelas (captura de bandera)
