@@ -667,11 +667,16 @@ UpdateState = function()
 		end
 	end
 
-	table.sort(frame.BattlegroundPOIData, function(a, b) return a[2] < b[2] end)
+	local list = {}
+	for _, data in pairs(frame.BattlegroundPOIData) do
+		table.insert(list, data)
+	end
+
+	table.sort(list, function(a, b) return a[2] < b[2] end)
 
 	local allianceIndex, hordeIndex = 1, 1
 
-	for _, POIData in ipairs(frame.BattlegroundPOIData) do
+	for _, POIData in ipairs(list) do
 		local button
 
 		if POIData[1] == "Alliance" then
