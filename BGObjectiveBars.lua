@@ -241,10 +241,15 @@ local function CreateBar(parent, id)
 	bar.BG:SetAllPoints(bar)
 	SetBundledTexture(bar.BG, "objectivewidget-bar-background", 0, 0, 0)
 
-	-- fill
+	-- fill (status bar texturizada + tinte; SetHorizTile se rompe en combate+mapa)
 	bar.BarFillTexture = bar:CreateTexture(nil, "BORDER")
 	bar.BarFillTexture:SetSize(1, 22)
-	SetBundledTexture(bar.BarFillTexture, "objectivewidget-bar-fill-" .. barSide, (id == 1) and 0.90 or 0.95, 0.15, 0.15)
+	bar.BarFillTexture:SetTexture("Interface\\TargetingFrame\\UI-StatusBar")
+	if id == 1 then
+		bar.BarFillTexture:SetVertexColor(0.45, 0.60, 1.00)  -- Alianza (azul)
+	else
+		bar.BarFillTexture:SetVertexColor(1.00, 0.30, 0.30)  -- Horda (rojo)
+	end
 	bar.BarFillTexture:SetPoint("CENTER", 0, 0)
 	bar.BarFillTexture:Hide()
 
