@@ -20,16 +20,11 @@ objetivos incluidas (con fallback a colores sólidos si faltan).
 
 <div align="center">
 
-<details>
-<summary><b>📸 Ver más capturas (3)</b></summary>
-
 ![BGObjectiveBars](images/screenshot-1.png)
 
 ![BGObjectiveBars](images/screenshot-2.png)
 
 ![BGObjectiveBars](images/screenshot-3.png)
-
-</details>
 
 </div>
 
