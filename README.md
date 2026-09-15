@@ -1,36 +1,46 @@
 # BGObjectiveBars
 
-Addon de World of Warcraft: Mists of Pandaria (5.4.8, `## Interface: 50400`) que
-reemplaza los indicadores numéricos de objetivos de campo de batalla por **dos
-barras** en la parte superior de la pantalla:
+Addon de barras de objetivo para campos de batalla en **World of Warcraft: Mists
+of Pandaria 5.4.8** (`## Interface: 50400`). Reemplaza los indicadores numéricos
+de PVP (capturas de bandera / puntos de equipo) por barras al estilo del
+`WorldStateFrame`.
 
-- **Alianza** a la izquierda (azul)
-- **Horda** a la derecha (rojo)
+- Barra **izquierda** = Alianza
+- Barra **derecha** = Horda
 
 Cada barra muestra el progreso del objetivo del BG (capturas de bandera, puntos de
 equipo, orbes, vagonetas, etc.) en formato `actual/máximo`, junto con iconos POI
 sobre las bases.
 
-![BGObjectiveBars](images/BGObjectiveBars.png)
+Porteado desde el parche custom `WorldStateFrame` de PandaWoW. Funciona con el
+cliente 5.4.x estándar usando la API estándar de 5.4 y las texturas del widget de
+objetivos incluidas (con fallback a colores sólidos si faltan).
+
+![BGObjectiveBars en campo de batalla](images/screenshot.png)
 
 ## Campos de batalla soportados
 
-Warsong Gulch, Twin Peaks, Arathi Basin, Battle for Gilneas, Eye of the Storm,
-Deepwind Gorge, Windvale Market, Alterac Valley, Isle of Conquest, Temple of
-Kotmogu, Silver Shard Mines y Seething Shore.
+- Garganta Grito de Guerra / Cumbres Gemelas (captura de bandera)
+- Cuenca de Arathi / Batalla por Gilneas / Ojo de la Tormenta / Garganta Fondo
+  Profundo / Mercado de Windvale (bases)
+- Valle de Alterac / Isla de la Conquista (refuerzos)
+- Templo de Kotmogu / Minas Lonjaplata / Costa Esquiva (objetos transportados)
 
 ## Instalación
 
-1. Copiá la carpeta `BGObjectiveBars/` (la que está dentro de este repo) a
-   `World of Warcraft/Interface/AddOns/`:
+Este repositorio **contiene** al addon; la carpeta que carga el cliente es
+`Interface/AddOns/BGObjectiveBars/`.
+
+1. Descargá el repo como ZIP y descomprimilo.
+2. Copiá la carpeta `BGObjectiveBars/` (la que está dentro del repo, ya tiene el
+   nombre correcto) a `World of Warcraft/Interface/AddOns/`:
 
    ```powershell
    Copy-Item -Recurse -Force .\BGObjectiveBars "N:\Games\Mists of Pandaria\Interface\AddOns\BGObjectiveBars"
    ```
 
-2. Reiniciá la interfaz en el juego con `/rl`.
-3. Activalo en la lista de addons si hace falta ("Load out of date addons" puede ser
-   necesario según el cliente).
+3. Reiniciá el cliente o la interfaz con `/rl`, y asegurate de tener el addon
+   activado ("Load out of date addons" puede ser necesario según el cliente).
 
 ## Uso
 
@@ -50,7 +60,8 @@ Las barras solo aparecen en los campos de batalla soportados.
 
 ## Estructura del repositorio
 
-Este repositorio **contiene** al addon; no es la carpeta live que carga el cliente.
+Este repositorio contiene al addon; no es la carpeta live que carga el cliente.
+La fuente de verdad es `BGObjectiveBars/`.
 
 ```
 BGObjectiveBars-MoP/
@@ -65,8 +76,11 @@ BGObjectiveBars-MoP/
 └── README.md
 ```
 
-## Créditos y licencia
+## Requisitos
 
-- Código bajo licencia MIT (ver `LICENSE`).
-- Portado del parche custom `WorldStateFrame` de PandaWoW.
-- Usa únicamente la API estándar de 5.4 y atlases de texturas del UI stock.
+- Cliente MoP **5.4.8** (`## Interface: 50400`).
+
+## Licencia
+
+Código bajo licencia [MIT](LICENSE). Las texturas de `textures/` son assets de
+Blizzard Entertainment y se incluyen únicamente para el funcionamiento del addon.
