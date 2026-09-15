@@ -18,6 +18,17 @@ objetivos incluidas (con fallback a colores sólidos si faltan).
 
 ![BGObjectiveBars en campo de batalla](images/screenshot.png)
 
+<details>
+<summary>Ver más capturas</summary>
+
+![BGObjectiveBars](images/screenshot-1.png)
+
+![BGObjectiveBars](images/screenshot-2.png)
+
+![BGObjectiveBars](images/screenshot-3.png)
+
+</details>
+
 ## Campos de batalla soportados
 
 - Garganta Grito de Guerra / Cumbres Gemelas (captura de bandera)
