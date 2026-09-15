@@ -18,8 +18,10 @@ objetivos incluidas (con fallback a colores sólidos si faltan).
 
 ![BGObjectiveBars en campo de batalla](images/screenshot.png)
 
+<div align="center">
+
 <details>
-<summary>Ver más capturas</summary>
+<summary><b>📸 Ver más capturas (3)</b></summary>
 
 ![BGObjectiveBars](images/screenshot-1.png)
 
@@ -28,6 +30,8 @@ objetivos incluidas (con fallback a colores sólidos si faltan).
 ![BGObjectiveBars](images/screenshot-3.png)
 
 </details>
+
+</div>
 
 ## Campos de batalla soportados
 
